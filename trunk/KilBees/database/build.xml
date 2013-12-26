@@ -24,7 +24,9 @@
 			<transaction src="${db.dir}/create/tbl_organization_document_type.sql" />
 			<transaction src="${db.dir}/create/mst_document.sql" />
 			<transaction src="${db.dir}/create/tbl_document.sql" />
-
+			
+			<!-- EVES_HR DB Tables -->
+			<transaction src="${db.dir}/ddl/tbl_account.sql" />
 			
 
 			
