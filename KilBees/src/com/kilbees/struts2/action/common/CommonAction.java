@@ -14,6 +14,7 @@ public class CommonAction extends AbstractAction {
 
 	public String loadEntrance()
 	{
+		System.out.println("InComing...");
 		return SUCCESS;
 	}
 
