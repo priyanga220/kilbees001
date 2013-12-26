@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DOCUMENT_SCAN" default="create database" basedir=".">
+
+	<property name="db.dir" value="./"/>
+
+	<property file="../src/jdbc.properties"/>
+
+	<target name="create database" description="Creating the database">
+		<sql driver="${jdbc.driverClassName}"
+			url="jdbc:mysql://localhost:3306/?useUnicode=true&amp;characterEncoding=UTF8"
+			userid="${jdbc.username}" password="${jdbc.password}"
+			encoding="utf-8" onerror="continue">
+
+			<classpath>
+    			<pathelement location="../WebContent/WEB-INF/lib/mysql-connector-java-5.1.23-bin.jar" />
+			</classpath>
+
+			<transaction src="${db.dir}/create/database.sql" />
+			<transaction src="${db.dir}/create/mst_organization.sql" />
+			<transaction src="${db.dir}/create/tbl_patient.sql" />
+			<transaction src="${db.dir}/create/tbl_user.sql" />
+
+			<transaction src="${db.dir}/create/mst_document_type.sql" />
+			<transaction src="${db.dir}/create/tbl_organization_document_type.sql" />
+			<transaction src="${db.dir}/create/mst_document.sql" />
+			<transaction src="${db.dir}/create/tbl_document.sql" />
+
+			
+
+			
+			<transaction src="${db.dir}/create/tbl_custom_tag.sql" />
+			<transaction src="${db.dir}/create/mst_tag.sql" />
+			<transaction src="${db.dir}/create/tbl_tag.sql" />
+
+			<transaction src="${db.dir}/insert/mst_organization.sql" />
+			<transaction src="${db.dir}/insert/tbl_user.sql" />
+			<transaction src="${db.dir}/insert/mst_document_type.sql" />
+			<transaction src="${db.dir}/insert/mst_document.sql" />
+			<transaction src="${db.dir}/insert/tbl_patient.sql" />
+			<transaction src="${db.dir}/insert/mst_tag.sql" />
+			<transaction src="${db.dir}/insert/tbl_document.sql" />
+			<transaction src="${db.dir}/insert/tbl_tag.sql" />
+			<transaction src="${db.dir}/insert/tbl_custom_tag.sql" />
+
+		</sql>
+	</target>
+</project>
