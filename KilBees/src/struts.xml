@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!--  Action mappings for Struts2 Configuration -->
+
+<struts>
+	<!--  KILBEES Default Struts 2 Packge Definition -->
+	<package name="kilbees-default" extends="struts-default" abstract="true">
+	</package>
+	
+	<include file="./com/kilbees/struts2/mapping/xml/common-struts.xml" />
+</struts>
